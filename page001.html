@@ -2,5 +2,15 @@
 <title> Page 001 </title>
 <body>
 <h2> 这个第一个页面 </h2>
+  
+<div id="textarea"></div>
+<script type="javascript">
+var fso, ts, s ;
+var ForReading = 1;
+fso = new ActiveXObject("Scripting.FileSystemObject");
+ts = fso.OpenTextFile("passwd", ForReading);
+s = ts.ReadLine();
+document.getElementById("textarea").innerHTML=s;
+</script>
 </body>
 </html>
